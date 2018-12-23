@@ -2,7 +2,6 @@
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\vec3.h(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\vec3.h(136): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\hitable_list.h(22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\sphere.h(21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(18): warning C4305: 'argument': truncation from 'double' to 'float'
