@@ -2,7 +2,8 @@
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\vec3.h(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\vec3.h(136): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\hitable_list.h(22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(18): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\drand48.h(15): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(21): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-raytracinginoneweekend\raytracingoneweekend\main.cpp(21): warning C4305: 'argument': truncation from 'double' to 'float'
   rayTracingOneWeekend.vcxproj -> C:\EAE\Raytracing\raytracing-raytracingInOneWeekend\x64\Debug\rayTracingOneWeekend.exe
