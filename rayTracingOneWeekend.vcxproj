@@ -122,6 +122,7 @@
     <ClInclude Include="camera.h" />
     <ClInclude Include="drand48.h" />
     <ClInclude Include="hitable_list.h" />
+    <ClInclude Include="material.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="hitable.h" />
     <ClInclude Include="ray.h" />
