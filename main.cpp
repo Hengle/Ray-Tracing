@@ -12,7 +12,7 @@ using namespace std;
 double drand48(void);
 
 hitable *random_scene() {
-	int n = 500;
+	int n = 5000;
 	hitable **list = new hitable *[n + 1];
 	list[0] = new sphere(vec3(0, -1000, 0), 1000, new lambertian(vec3(0.5, 0.5, 0.5)));
 	int i = 1;
@@ -22,7 +22,7 @@ hitable *random_scene() {
 			vec3 center(a + 0.9*drand48(), 0.2, b + 0.9*drand48());
 			if ((center - vec3(4, 0.2, 0)).length() > 0.9) {
 				if (choose_mat < 0.8) {
-					list[i++] = new sphere(center, 0.2, new lambertian(vec3(drand48()*drand48(), drand48()*drand48(), drand48()*drand48())));
+					list[i++] = new moving_sphere(center, center+vec3(0,0.5*drand48(),0) , 0.0, 1.0, 0.2, new lambertian(vec3(drand48()*drand48(), drand48()*drand48(), drand48()*drand48())));
 				}
 				else if(choose_mat<0.95){
 					list[i++] = new sphere(center, 0.2, new metal(vec3(0.5*(1+drand48()), 0.5*(1 + drand48()), 0.5*(1 + drand48())), 0.5*drand48()));
@@ -88,7 +88,7 @@ int main()
 	vec3 lookat(0, 0, 0);
 	float dist_to_focus = 10;
 	float aperture = 0.1;
-	camera cam(lookfrom, lookat,vec3(0, 1, 0), 30, float(nx) / float(ny), aperture, dist_to_focus);
+	camera cam(lookfrom, lookat,vec3(0, 1, 0), 30, float(nx) / float(ny), aperture, dist_to_focus, 0.0, 1.0);
 	// Draw image pixels from top to bottom, left to right
 	for (int j = ny-1; j >= 0; j--)
 	{
