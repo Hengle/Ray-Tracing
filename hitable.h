@@ -14,6 +14,7 @@ struct hit_record
 	material *mat_ptr;
 };
 
+
 class hitable
 {
 public:
