@@ -6,6 +6,7 @@
 #include "hitable.h"
 #include "vec3.h"
 #include "drand48.h"
+#include "texture.h"
 
 double drand48(void);
 
@@ -88,15 +89,17 @@ vec3 random_in_unit_sphere() {
 
 class lambertian : public material {
 public:
-	lambertian(const vec3& b) : albedo(b) {}
+	lambertian(texture *b) : albedo(b) {}
 	virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const {
 		vec3 target = rec.p + rec.normal + random_in_unit_sphere();
 		scattered = ray(rec.p, target - rec.p, r_in.time());
-		attenuation = albedo;
+		attenuation = albedo->value(0, 0, rec.p);
 		return true;
 	}
 
-	vec3 albedo;
+	texture *albedo;
+
+//	vec3 albedo;
 };
 
 class metal : public material {
