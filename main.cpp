@@ -12,6 +12,24 @@
 using namespace std;
 double drand48(void);
 
+
+hitable *two_perlin_spheres() {
+	texture *pertext = new noise_texture(4);
+	hitable **list = new hitable*[2];
+	list[0] = new sphere(vec3(0, -1000, 0), 1000, new lambertian(pertext));
+	list[1] = new sphere(vec3(0, 2, 0), 2, new lambertian(pertext));
+	return new hitable_list(list, 2);
+}
+
+
+hitable *two_sphere() {
+	texture *checker = new checker_texture(new constant_texture(vec3(0.2, 0.3, 0.1)), new constant_texture(vec3(0.9, 0.9, 0.9)));
+	int n = 50;
+	hitable **list = new hitable *[n + 1];
+
+	return new hitable_list(list,2);
+}
+
 hitable *random_scene() {
 	int n = 5000;
 	hitable **list = new hitable *[n + 1];
@@ -65,31 +83,31 @@ vec3 color(const ray& r, hitable *world, int depth) {
 int main()
 {
 
-	int nx = 1200;
-	int ny = 800;
+	int nx = 360;
+	int ny = 240;
 	int ns = 10;
 
-	ofstream outfile("chapter15_texture.ppm", ios_base::out);
+	ofstream outfile("chapter16_perlin3.ppm", ios_base::out);
 	// Output to .ppm file
 	outfile << "P3\n" << nx << " " << ny << "\n255\n";
 	// output to command line
 	std::cout << "P3\n" << nx << " " << ny << "\n255\n";
 
 	hitable *list[5];
-	list[0] = new sphere(vec3(0, 0, -1), 0.5, new lambertian(new constant_texture(vec3(0.1, 0.2, 0.5))));
-	list[1] = new sphere(vec3(0, -100.5, -1), 100, new lambertian(new constant_texture(vec3(0.8, 0.8, 0.0))));
-	list[2] = new sphere(vec3(1, 0, -1), 0.5, new metal(vec3(0.8, 0.6, 0.2), 0.5));
-	list[3] = new sphere(vec3(-1, 0, -1), 0.5, new dielectric(1.5));
-	list[4] = new sphere(vec3(-1, 0, -1), -0.45, new dielectric(1.5));
+//	list[0] = new sphere(vec3(0, 0, -1), 0.5, new lambertian(new constant_texture(vec3(0.1, 0.2, 0.5))));
+//	list[1] = new sphere(vec3(0, -100.5, -1), 100, new lambertian(new constant_texture(vec3(0.8, 0.8, 0.0))));
+//	list[2] = new sphere(vec3(1, 0, -1), 0.5, new metal(vec3(0.8, 0.6, 0.2), 0.5));
+//	list[3] = new sphere(vec3(-1, 0, -1), 0.5, new dielectric(1.5));
+//	list[4] = new sphere(vec3(-1, 0, -1), -0.45, new dielectric(1.5));
 
 
-	hitable *world = new hitable_list(list, 5);
-	world = random_scene();
+//	hitable *world = new hitable_list(list, 5);
+	hitable *world = two_perlin_spheres();
 
 	vec3 lookfrom(13, 2, 3);
 	vec3 lookat(0, 0, 0);
 	float dist_to_focus = 10;
-	float aperture = 0.1;
+	float aperture = 0.0;
 	camera cam(lookfrom, lookat,vec3(0, 1, 0), 30, float(nx) / float(ny), aperture, dist_to_focus, 0.0, 1.0);
 	// Draw image pixels from top to bottom, left to right
 	for (int j = ny-1; j >= 0; j--)
