@@ -7,6 +7,7 @@
 #include "camera.h"
 #include "drand48.h"
 #include "material.h"
+#include "moving_sphere.h"
 
 using namespace std;
 double drand48(void);
@@ -67,7 +68,7 @@ int main()
 	int ny = 800;
 	int ns = 10;
 
-	ofstream outfile("chapter13.ppm", ios_base::out);
+	ofstream outfile("chapter14.ppm", ios_base::out);
 	// Output to .ppm file
 	outfile << "P3\n" << nx << " " << ny << "\n255\n";
 	// output to command line
