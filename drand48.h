@@ -3,17 +3,17 @@
 
 #include <stdlib.h>
 
-#define m1 0x100000000LL
-#define c1 0xB16
-#define a1 0x5DEECE66DLL
+#define m_drand 0x100000000LL
+#define c_drand 0xB16
+#define a_drand 0x5DEECE66DLL
 
 static unsigned long long seed = 1;
 
 double drand48(void)
 {
-	seed = (a1 * seed + c1) & 0xFFFFFFFFFFFFLL;
+	seed = (a_drand * seed + c_drand) & 0xFFFFFFFFFFFFLL;
 	unsigned int x = seed >> 16;
-	return 	((double)x / (double)m1);
+	return 	((double)x / (double)m_drand);
 
 }
 

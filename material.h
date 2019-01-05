@@ -16,6 +16,9 @@ vec3 reflect(const vec3& v, const vec3& n) {
 class material {
 public:
 	virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const = 0;
+	virtual vec3 emitted(float u, float v, const vec3& p) const {
+		return vec3(0, 0, 0);
+	}
 };
 
 bool refract(const vec3& v, const vec3& n, float ni_over_nt, vec3& refracted) {
@@ -35,6 +38,21 @@ float schlick(float cosine, float ref_idx) {
 	r0 = r0 * r0;
 	return r0 + (1 - r0)*pow((1 - cosine), 5);
 }
+
+
+class diffuse_light : public material {
+public:
+	diffuse_light(texture *textu):emit(textu){}
+	virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered)
+		const {
+		return false;
+	}
+	virtual vec3 emitted(float u, float v, const vec3& p) const {
+		return emit->value(u, v, p);
+	}
+
+	texture *emit;
+};
 
 class dielectric :public material {
 public:
