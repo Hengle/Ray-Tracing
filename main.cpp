@@ -24,11 +24,12 @@ hitable *cornell_box() {
 	material *white = new lambertian(new constant_texture(vec3(0.73, 0.73, 0.73)));
 	material *green = new lambertian(new constant_texture(vec3(0.12, 0.45, 0.15)));
 	material *light = new diffuse_light(new constant_texture(vec3(15, 15, 15)));
-	list[i++] = new yz_rect(0, 555, 0, 555, 555, green);
+	list[i++] = new flip_normals(new yz_rect(0, 555, 0, 555, 555, green));
 	list[i++] = new yz_rect(0, 555, 0, 555, 0, red);
 	list[i++] = new xz_rect(213, 343, 227, 332, 554, light);
+	list[i++] = new flip_normals(new xz_rect(0, 555, 0, 555, 555, white));
 	list[i++] = new xz_rect(0, 555, 0, 555, 0, white);
-	list[i++] = new xy_rect(0, 555, 0, 555, 555, white);
+	list[i++] = new flip_normals(new xy_rect(0, 555, 0, 555, 555, white));
 	return new hitable_list(list, i);
 }
 
@@ -124,7 +125,7 @@ int main()
 	int ny = 340;
 	int ns = 100;
 
-	ofstream outfile("chapter17_cornell_box_1.ppm", ios_base::out);
+	ofstream outfile("chapter18_cornellNbox.ppm", ios_base::out);
 	// Output to .ppm file
 	outfile << "P3\n" << nx << " " << ny << "\n255\n";
 	// output to command line
