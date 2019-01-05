@@ -4,6 +4,8 @@ c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\vec3.h(136): warning 
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\hitable.h(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\hitable.h(35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\hitable.h(45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\hitable.h(59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\hitable.h(74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\hitable_list.h(41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\drand48.h(15): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\perlin.h(29): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
@@ -21,19 +23,22 @@ c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\image_texture.h(18): 
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\image_texture.h(27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\image_texture.h(28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\image_texture.h(29): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(49): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(59): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(65): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(66): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(68): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(71): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(23): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(24): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(64): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(74): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(79): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(80): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(81): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(88): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(118): warning C4101: 'list': unreferenced local variable
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(83): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(86): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(86): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(89): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(95): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(96): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(103): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\eae\raytracing\raytracing-nextweek\raytracingoneweekend\main.cpp(133): warning C4101: 'list': unreferenced local variable
   rayTracingOneWeekend.vcxproj -> C:\EAE\Raytracing\raytracing-nextWeek\x64\Debug\rayTracingOneWeekend.exe
