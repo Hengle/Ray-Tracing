@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aabb.h" />
+    <ClInclude Include="box.h" />
     <ClInclude Include="bvh.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="drand48.h" />
@@ -128,11 +129,13 @@
     <ClInclude Include="material.h" />
     <ClInclude Include="moving_sphere.h" />
     <ClInclude Include="perlin.h" />
+    <ClInclude Include="rotate_y.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="hitable.h" />
     <ClInclude Include="ray.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="texture.h" />
+    <ClInclude Include="translate.h" />
     <ClInclude Include="vec3.h" />
   </ItemGroup>
   <ItemGroup>
