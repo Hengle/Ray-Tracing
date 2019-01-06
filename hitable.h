@@ -94,5 +94,8 @@ public:
 	}
 	hitable *ptr;
 };
+
+
+
 #endif
 

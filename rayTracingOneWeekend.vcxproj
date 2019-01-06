@@ -123,6 +123,7 @@
     <ClInclude Include="box.h" />
     <ClInclude Include="bvh.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="constant_medium.h" />
     <ClInclude Include="drand48.h" />
     <ClInclude Include="hitable_list.h" />
     <ClInclude Include="image_texture.h" />

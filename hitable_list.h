@@ -103,4 +103,6 @@ bool yz_rect::hit(const ray& r, float t_min, float t_max, hit_record& rec) const
 	rec.normal = vec3(1, 0, 0);
 	return true;
 }
+
+
 #endif
