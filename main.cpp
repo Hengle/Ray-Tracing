@@ -110,6 +110,33 @@ hitable *cornell_box() {
 }
 
 
+hitable *testbvh() {
+	hitable **list = new hitable*[30];
+	hitable **boxlist = new hitable *[100];
+	material *green = new lambertian(new constant_texture(vec3(0.48, 0.83, 0.53)));
+	material *light = new diffuse_light(new constant_texture(vec3(7, 7, 7)));
+	int i = 0;
+	int nb = 10;
+	int b = 0;
+	list[i++] = new xz_rect(123, 323, 147, 412, 554, light);
+	for (int i = 0; i < nb; ++i) {
+		for (int j = 0; j < nb; ++j) {
+			float w = 100;
+			float x0 = -500 + i * w;
+			float z0 = -500 + j * w;
+			float y0 = 0;
+			float x1 = x0 + w;
+			float z1 = z0 + w;
+			float y1 = 100 * (drand48() + 0.01);
+			boxlist[b++] = new box(vec3(x0, y0, z0), vec3(x1, y1, z1), green);
+		}
+	}
+	int l = 0;
+	list[i++] = new bvh_node(boxlist, b, 0, 1);
+	return new hitable_list(list, i);
+}
+
+
 hitable *simple_light() {
 	texture *pertext = new noise_texture(4);
 	hitable **list = new hitable*[4];
@@ -201,7 +228,7 @@ int main()
 	int ny = 160;
 	int ns = 100;
 
-	ofstream outfile("chapter19_cornellSmoke_1.ppm", ios_base::out);
+	ofstream outfile("chapter20_bvh_1.ppm", ios_base::out);
 	// Output to .ppm file
 	outfile << "P3\n" << nx << " " << ny << "\n255\n";
 	// output to command line
@@ -216,9 +243,9 @@ int main()
 
 
 //	hitable *world = new hitable_list(list, 5);
-	hitable *world = cornell_smoke();
+	hitable *world = testbvh();
 
-	vec3 lookfrom(278, 278, -800);
+	vec3 lookfrom(478, 278, -600);
 	vec3 lookat(278, 278, 0);
 	float dist_to_focus = 10.0;
 	float aperture = 0.0;
